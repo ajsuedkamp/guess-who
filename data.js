@@ -1,50 +1,29 @@
 var people = [
   {
-    name: 'Dev',
-    githubUsername: 'devjanaprime'
-  },
-  {
-    name: 'Dane',
-    githubUsername: 'DoctorHowser'
-  },
-  {
-    name: 'Matt',
-    githubUsername: 'matthew-black'
-  },
-  {
-    name: 'Kris',
-    githubUsername: 'kdszafranski'
-  },
-  {
-    name: 'Edan',
-    githubUsername: 'eschwartz'
-  },
-  {
-    name: 'Liz',
-    githubUsername: 'emkerber'
-  },
-  {
-    name: 'Chris',
-    githubUsername: 'christopher-black'
-  },
-  {
     name: 'Latisha',
     githubUsername: 'lcopeland001',
-  }
-  {
-    name: 'Jon',
-    githubUsername: 'Jbaxend1',
-  }
+    profilePic: '<img src="https://avatars.githubusercontent.com/u/104704657?v=4?size=250" alt="profile image of Latisha"'
+  
+  },
   {
     name: 'Oscar',
     githubUsername: 'oscar-oscar',
-  }
+    profilePic: '<img src="https://avatars.githubusercontent.com/u/99150237?v=4?size=250" alt="profile image of Latisha"'
+    
+  },
+  {
+    name: 'Jon',
+    githubUsername: 'Jbaxend1',
+    profilePic: '<img src="https://avatars.githubusercontent.com/u/99089013?v=4?size=250" alt="Profile image of Jonathan"'
+  },
   {
     name: 'Alex',
     githubUsername: 'ajsuedkamp',
-  }
+    profilePic: '<img src="https://avatars.githubusercontent.com/u/99096711?v=4?size=250" alt="Profile image of Alex">'
+  },
   {
-    name: 'Kyle',
+    name: 'kyle',
     githubUsername: 'Octicon',
-  }
-];
+    profilePic: '<img src="https://avatars.githubusercontent.com/u/99093821?v=4?size=250" alt="Profile image of Kyle"></img>'
+  },
+]
