@@ -1,24 +1,30 @@
-console.log('Here are all the available people:', people);
+
 
 $(readyNow)
 
 function readyNow() {
     console.log('readyNow');
     $(document).ready(addPictures);
+    $('#start').on('click', getRandomName);
 }
 
 
 function addPictures() {
-    for(let pic of people) $('#picture-content').append(`
-    <div>
-    <button class='pics'> ${pic.profilePic}</button>
-    </div>
+    for (let pic of people) $('#picture-content').append(`
+        <div class><button class="pics"><img src="https://github.com/${pic.githubUsername}.png?size=250" alt="profile image of ${pic.name}"></button></div>
     `)
 }
 
 
 function randomNumber(min, max){
     return Math.floor(Math.random() * (1 + max - min) + min);
+}
+function getRandomName() {
+    console.log('in getRandomName');
+    const randomName = Math.floor(Math.random() * people.length);
+    const item = people[randomName].name;
+    $('#game-start').text(`Guess Who ${item} Is ?`);
+    return item;
 }
 
 
@@ -64,7 +70,8 @@ function randomNumber(min, max){
 // function randomPerson(){
 //     console.log('in randomPerson');
 //         for( let i=0; i<people.length; i+=1){
-//             let randomPerson = people[i];
+//             let randomPerson = people[num];
+            
 //             if (i === randomNumber(0,4)){
 //                 console.log('person', randomPerson.name); 
 //                 $('#random-person').text(`
