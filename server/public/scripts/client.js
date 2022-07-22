@@ -6,6 +6,7 @@ function readyNow() {
     console.log('readyNow');
     $(document).ready(addPictures);
     $('#start').on('click', getRandomName);
+    displayServer();
 }
 
 
@@ -27,6 +28,24 @@ function getRandomName() {
     return item;
 }
 
+function displayServer() {
+    console.log('before AJAX');
+    $.ajax({
+        method: 'GET',
+        url: '/people'
+    }).then(function(response){
+        console.log('response', response);
+        for(let person of response) {
+            $('#server').append(`
+            <p>Name: ${person.name}</p>
+            `)
+        }
+    }).catch(function(error){
+        console.log('error', error);
+        alert('something went wrong');
+    });
+    console.log('after AJAX')
+}
 
 // Kyles Code
 
