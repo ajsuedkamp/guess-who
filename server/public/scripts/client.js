@@ -7,6 +7,7 @@ function readyNow() {
     $(document).ready(addPictures);
     $('#start').on('click', getRandomName);
     displayServer();
+    
 }
 
 
@@ -31,13 +32,13 @@ function getRandomName() {
 function displayServer() {
     console.log('before AJAX');
     $.ajax({
-        method: 'GET',
-        url: '/people'
+        method:'GET',
+        url:'/people',
     }).then(function(response){
         console.log('response', response);
         for(let person of response) {
             $('#server').append(`
-            <p>Name: ${person.name}</p>
+            <p>Name:${person.name}</p>
             `)
         }
     }).catch(function(error){
